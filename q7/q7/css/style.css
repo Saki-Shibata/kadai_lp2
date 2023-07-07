@@ -1,0 +1,33 @@
+@charset "UTF-8";
+.comment{
+  position: relative;
+  width: 500px;
+  border: 5px solid #8f5a0a;
+  border-radius: 30px;
+  background: #fad296;
+  padding: 20px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+.comment::before,.comment::after {
+  /*疑似要素をブロック要素にする*/
+  display: block;
+  content: '';
+
+  /*positionの指定*/
+  position: absolute;
+  top: 100%;
+  left: 5%;
+
+  /*三角形を作るCSS*/
+  width: 0;
+  height: 0;
+  border: 25px solid transparent;
+}
+.comment::before {
+  border-top: 25px solid #8f5a0a;
+}
+.comment::after {
+  margin-top: -7px;
+  border-top: 25px solid #fad296;
+}
